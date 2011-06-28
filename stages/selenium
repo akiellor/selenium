@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+unset GEM_PATH
+unset GEM_HOME
+
+PROJECT_DIR=$(cd `dirname $0`/../ && pwd)
+
+java -jar $PROJECT_DIR/third_party/jruby/jruby-complete.jar $PROJECT_DIR/stages/lib/selenium.rb
+
